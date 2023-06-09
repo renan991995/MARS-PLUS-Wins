@@ -1,0 +1,757 @@
+# Project: ±M®×1
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = src/main.o src/CASES_IL.o src/CASES_IL_INDEPENDENT.o src/CASES_NEU.o src/ELEMENTS.o src/IL.o src/MOLECULE.o src/UTILITY.o ../openbabel-master/src/alias.o ../openbabel-master/src/atom.o ../openbabel-master/src/base.o ../openbabel-master/src/bitvec.o ../openbabel-master/src/bond.o ../openbabel-master/src/bondtyper.o ../openbabel-master/src/builder.o ../openbabel-master/src/canon.o ../openbabel-master/src/chains.o ../openbabel-master/src/chargemodel.o ../openbabel-master/src/conformersearch.o ../openbabel-master/src/data.o ../openbabel-master/src/data_utilities.o ../openbabel-master/src/descriptor.o ../openbabel-master/src/distgeom.o ../openbabel-master/src/dlhandler_win32.o ../openbabel-master/src/doxygen_pages.o ../openbabel-master/src/elements.o ../openbabel-master/src/fingerprint.o ../openbabel-master/src/forcefield.o ../openbabel-master/src/format.o ../openbabel-master/src/generic.o ../openbabel-master/src/graphsym.o ../openbabel-master/src/grid.o ../openbabel-master/src/griddata.o ../openbabel-master/src/isomorphism.o ../openbabel-master/src/kekulize.o ../openbabel-master/src/locale.o ../openbabel-master/src/matrix.o ../openbabel-master/src/mcdlutil.o ../openbabel-master/src/memcpy.o ../openbabel-master/src/mol.o ../openbabel-master/src/molchrg.o ../openbabel-master/src/obconversion.o ../openbabel-master/src/oberror.o ../openbabel-master/src/obfunctions.o ../openbabel-master/src/obiter.o ../openbabel-master/src/obmolecformat.o ../openbabel-master/src/obutil.o ../openbabel-master/src/op.o ../openbabel-master/src/parsmart.o ../openbabel-master/src/patty.o ../openbabel-master/src/phmodel.o ../openbabel-master/src/pointgroup.o ../openbabel-master/src/query.o ../openbabel-master/src/rand.o ../openbabel-master/src/RDKitConv.o ../openbabel-master/src/reactionfacade.o ../openbabel-master/src/residue.o ../openbabel-master/src/ring.o ../openbabel-master/src/rotamer.o ../openbabel-master/src/rotor.o ../openbabel-master/src/spectrophore.o ../openbabel-master/src/strncasecmp.o ../openbabel-master/src/tautomer.o ../openbabel-master/src/tokenst.o ../openbabel-master/src/transform.o ../openbabel-master/src/typer.o ../openbabel-master/src/charges/eem.o ../openbabel-master/src/charges/eqeq.o ../openbabel-master/src/charges/fromfile.o ../openbabel-master/src/charges/gasteiger.o ../openbabel-master/src/charges/mmff94.o ../openbabel-master/src/charges/none.o ../openbabel-master/src/charges/qeq.o ../openbabel-master/src/charges/qtpie.o ../openbabel-master/src/depict/asciipainter.o ../openbabel-master/src/depict/cairopainter.o ../openbabel-master/src/depict/commandpainter.o ../openbabel-master/src/depict/depict.o ../openbabel-master/src/depict/svgpainter.o ../openbabel-master/src/descriptors/cansmidescriptor.o ../openbabel-master/src/descriptors/cmpdfilter.o ../openbabel-master/src/descriptors/filters.o ../openbabel-master/src/descriptors/groupcontrib.o ../openbabel-master/src/descriptors/inchidescriptor.o ../openbabel-master/src/descriptors/smartsdescriptors.o ../openbabel-master/src/fingerprints/finger2.o ../openbabel-master/src/fingerprints/finger3.o ../openbabel-master/src/fingerprints/fingerecfp.o ../openbabel-master/src/forcefields/forcefielduff.o ../openbabel-master/src/formats/APIInterface.o ../openbabel-master/src/formats/chem3dformat.o ../openbabel-master/src/formats/chemtoolformat.o ../openbabel-master/src/formats/exyzformat.o ../openbabel-master/src/formats/fchkformat.o ../openbabel-master/src/formats/fingerprintformat.o ../openbabel-master/src/formats/fpsformat.o ../openbabel-master/src/formats/gausscubeformat.o ../openbabel-master/src/formats/gaussformat.o ../openbabel-master/src/formats/gausszmatformat.o ../openbabel-master/src/formats/MCDLformat.o ../openbabel-master/src/formats/mol2format.o ../openbabel-master/src/formats/smilesformat.o ../openbabel-master/src/formats/svgformat.o ../openbabel-master/src/formats/xyzformat.o ../openbabel-master/src/math/align.o ../openbabel-master/src/math/matrix3x3.o ../openbabel-master/src/math/spacegroup.o ../openbabel-master/src/math/transform3d.o ../openbabel-master/src/math/vector3.o ../openbabel-master/src/ops/addfilename.o ../openbabel-master/src/ops/addinindex.o ../openbabel-master/src/ops/addnonpolarh.o ../openbabel-master/src/ops/addpolarh.o ../openbabel-master/src/ops/canonical.o ../openbabel-master/src/ops/changecell.o ../openbabel-master/src/ops/conformer.o ../openbabel-master/src/ops/delnonpolarh.o ../openbabel-master/src/ops/delpolarh.o ../openbabel-master/src/ops/fillUC.o ../openbabel-master/src/ops/forcefield.o ../openbabel-master/src/ops/gen2D.o ../openbabel-master/src/ops/gen3d.o ../openbabel-master/src/ops/largest.o ../openbabel-master/src/ops/loader.o ../openbabel-master/src/ops/neutralize.o ../openbabel-master/src/ops/opalign.o ../openbabel-master/src/ops/ophighlight.o ../openbabel-master/src/ops/opisomorph.o ../openbabel-master/src/ops/opsplit.o ../openbabel-master/src/ops/optransform.o ../openbabel-master/src/ops/partialcharges.o ../openbabel-master/src/ops/readconformers.o ../openbabel-master/src/ops/sort.o ../openbabel-master/src/ops/xout.o ../openbabel-master/src/stereo/cistrans.o ../openbabel-master/src/stereo/facade.o ../openbabel-master/src/stereo/gen3dstereohelper.o ../openbabel-master/src/stereo/perception.o ../openbabel-master/src/stereo/squareplanar.o ../openbabel-master/src/stereo/stereo.o ../openbabel-master/src/stereo/tetrahedral.o ../openbabel-master/src/stereo/tetranonplanar.o ../openbabel-master/src/stereo/tetraplanar.o ../openbabel-master/src/plugin.o ../openbabel-master/src/formats/abinitformat.o ../openbabel-master/src/formats/acesformat.o ../openbabel-master/src/formats/acrformat.o ../openbabel-master/src/formats/adfformat.o ../openbabel-master/src/formats/alchemyformat.o ../openbabel-master/src/formats/amberformat.o ../openbabel-master/src/formats/aoforceformat.o ../openbabel-master/src/formats/asciiformat.o ../openbabel-master/src/formats/balstformat.o ../openbabel-master/src/formats/bgfformat.o ../openbabel-master/src/formats/boxformat.o ../openbabel-master/src/formats/cacaoformat.o ../openbabel-master/src/formats/cacheformat.o ../openbabel-master/src/formats/carformat.o ../openbabel-master/src/formats/castepformat.o ../openbabel-master/src/formats/cccformat.o ../openbabel-master/src/formats/chemdrawcdx.o ../openbabel-master/src/formats/chemdrawct.o ../openbabel-master/src/formats/chemkinformat.o ../openbabel-master/src/formats/cifformat.o ../openbabel-master/src/formats/cofformat.o ../openbabel-master/src/formats/confabreport.o ../openbabel-master/src/formats/copyformat.o ../openbabel-master/src/formats/crkformat.o ../openbabel-master/src/formats/crystal09format.o ../openbabel-master/src/formats/CSRformat.o ../openbabel-master/src/formats/cssrformat.o ../openbabel-master/src/formats/daltonformat.o ../openbabel-master/src/formats/dlpolyformat.o ../openbabel-master/src/formats/dmolformat.o ../openbabel-master/src/formats/fastaformat.o ../openbabel-master/src/formats/fastsearchformat.o ../openbabel-master/src/formats/featformat.o ../openbabel-master/src/formats/fhformat.o ../openbabel-master/src/formats/fhiaimsformat.o ../openbabel-master/src/formats/freefracformat.o ../openbabel-master/src/formats/gamessformat.o ../openbabel-master/src/formats/genbankformat.o ../openbabel-master/src/formats/getinchi.o ../openbabel-master/src/formats/ghemicalformat.o ../openbabel-master/src/formats/groformat.o ../openbabel-master/src/formats/gromos96format.o ../openbabel-master/src/formats/gulpformat.o ../openbabel-master/src/formats/hinformat.o ../openbabel-master/src/formats/jaguarformat.o ../openbabel-master/src/formats/lmpdatformat.o ../openbabel-master/src/formats/lpmdformat.o ../openbabel-master/src/formats/mdffformat.o ../openbabel-master/src/formats/mdlformat.o ../openbabel-master/src/formats/mmcifformat.o ../openbabel-master/src/formats/mmodformat.o ../openbabel-master/src/formats/MNAformat.o ../openbabel-master/src/formats/moldenformat.o ../openbabel-master/src/formats/molproformat.o ../openbabel-master/src/formats/molreport.o ../openbabel-master/src/formats/mopacformat.o ../openbabel-master/src/formats/mpdformat.o ../openbabel-master/src/formats/mpqcformat.o ../openbabel-master/src/formats/msiformat.o ../openbabel-master/src/formats/msmsformat.o ../openbabel-master/src/formats/nulformat.o ../openbabel-master/src/formats/nwchemformat.o ../openbabel-master/src/formats/opendxformat.o ../openbabel-master/src/formats/outformat.o ../openbabel-master/src/formats/painterformat.o ../openbabel-master/src/formats/pcmodelformat.o ../openbabel-master/src/formats/pdbformat.o ../openbabel-master/src/formats/pdbqtformat.o ../openbabel-master/src/formats/pointcloudformat.o ../openbabel-master/src/formats/posformat.o ../openbabel-master/src/formats/povrayformat.o ../openbabel-master/src/formats/pqrformat.o ../openbabel-master/src/formats/PQSformat.o ../openbabel-master/src/formats/pwscfformat.o ../openbabel-master/src/formats/qchemformat.o ../openbabel-master/src/formats/reportformat.o ../openbabel-master/src/formats/rinchiformat.o ../openbabel-master/src/formats/rsmiformat.o ../openbabel-master/src/formats/rxnformat.o ../openbabel-master/src/formats/shelxformat.o ../openbabel-master/src/formats/siestaformat.o ../openbabel-master/src/formats/smileyformat.o ../openbabel-master/src/formats/stlformat.o ../openbabel-master/src/formats/textformat.o ../openbabel-master/src/formats/thermoformat.o ../openbabel-master/src/formats/tinkerformat.o ../openbabel-master/src/formats/titleformat.o ../openbabel-master/src/formats/turbomoleformat.o ../openbabel-master/src/formats/unichemformat.o ../openbabel-master/src/formats/vaspformat.o ../openbabel-master/src/formats/viewmolformat.o ../openbabel-master/src/formats/wlnformat.o ../openbabel-master/src/formats/wln-nextmove.o ../openbabel-master/src/formats/xedformat.o ../openbabel-master/src/formats/xsfformat.o ../openbabel-master/src/formats/yasaraformat.o ../openbabel-master/src/formats/zindoformat.o ../openbabel-master/src/forcefields/forcefieldgaff.o ../openbabel-master/src/forcefields/forcefieldghemical.o ../openbabel-master/src/forcefields/forcefieldmmff94.o
+LINKOBJ  = src/main.o src/CASES_IL.o src/CASES_IL_INDEPENDENT.o src/CASES_NEU.o src/ELEMENTS.o src/IL.o src/MOLECULE.o src/UTILITY.o ../openbabel-master/src/alias.o ../openbabel-master/src/atom.o ../openbabel-master/src/base.o ../openbabel-master/src/bitvec.o ../openbabel-master/src/bond.o ../openbabel-master/src/bondtyper.o ../openbabel-master/src/builder.o ../openbabel-master/src/canon.o ../openbabel-master/src/chains.o ../openbabel-master/src/chargemodel.o ../openbabel-master/src/conformersearch.o ../openbabel-master/src/data.o ../openbabel-master/src/data_utilities.o ../openbabel-master/src/descriptor.o ../openbabel-master/src/distgeom.o ../openbabel-master/src/dlhandler_win32.o ../openbabel-master/src/doxygen_pages.o ../openbabel-master/src/elements.o ../openbabel-master/src/fingerprint.o ../openbabel-master/src/forcefield.o ../openbabel-master/src/format.o ../openbabel-master/src/generic.o ../openbabel-master/src/graphsym.o ../openbabel-master/src/grid.o ../openbabel-master/src/griddata.o ../openbabel-master/src/isomorphism.o ../openbabel-master/src/kekulize.o ../openbabel-master/src/locale.o ../openbabel-master/src/matrix.o ../openbabel-master/src/mcdlutil.o ../openbabel-master/src/memcpy.o ../openbabel-master/src/mol.o ../openbabel-master/src/molchrg.o ../openbabel-master/src/obconversion.o ../openbabel-master/src/oberror.o ../openbabel-master/src/obfunctions.o ../openbabel-master/src/obiter.o ../openbabel-master/src/obmolecformat.o ../openbabel-master/src/obutil.o ../openbabel-master/src/op.o ../openbabel-master/src/parsmart.o ../openbabel-master/src/patty.o ../openbabel-master/src/phmodel.o ../openbabel-master/src/pointgroup.o ../openbabel-master/src/query.o ../openbabel-master/src/rand.o ../openbabel-master/src/RDKitConv.o ../openbabel-master/src/reactionfacade.o ../openbabel-master/src/residue.o ../openbabel-master/src/ring.o ../openbabel-master/src/rotamer.o ../openbabel-master/src/rotor.o ../openbabel-master/src/spectrophore.o ../openbabel-master/src/strncasecmp.o ../openbabel-master/src/tautomer.o ../openbabel-master/src/tokenst.o ../openbabel-master/src/transform.o ../openbabel-master/src/typer.o ../openbabel-master/src/charges/eem.o ../openbabel-master/src/charges/eqeq.o ../openbabel-master/src/charges/fromfile.o ../openbabel-master/src/charges/gasteiger.o ../openbabel-master/src/charges/mmff94.o ../openbabel-master/src/charges/none.o ../openbabel-master/src/charges/qeq.o ../openbabel-master/src/charges/qtpie.o ../openbabel-master/src/depict/asciipainter.o ../openbabel-master/src/depict/cairopainter.o ../openbabel-master/src/depict/commandpainter.o ../openbabel-master/src/depict/depict.o ../openbabel-master/src/depict/svgpainter.o ../openbabel-master/src/descriptors/cansmidescriptor.o ../openbabel-master/src/descriptors/cmpdfilter.o ../openbabel-master/src/descriptors/filters.o ../openbabel-master/src/descriptors/groupcontrib.o ../openbabel-master/src/descriptors/inchidescriptor.o ../openbabel-master/src/descriptors/smartsdescriptors.o ../openbabel-master/src/fingerprints/finger2.o ../openbabel-master/src/fingerprints/finger3.o ../openbabel-master/src/fingerprints/fingerecfp.o ../openbabel-master/src/forcefields/forcefielduff.o ../openbabel-master/src/formats/APIInterface.o ../openbabel-master/src/formats/chem3dformat.o ../openbabel-master/src/formats/chemtoolformat.o ../openbabel-master/src/formats/exyzformat.o ../openbabel-master/src/formats/fchkformat.o ../openbabel-master/src/formats/fingerprintformat.o ../openbabel-master/src/formats/fpsformat.o ../openbabel-master/src/formats/gausscubeformat.o ../openbabel-master/src/formats/gaussformat.o ../openbabel-master/src/formats/gausszmatformat.o ../openbabel-master/src/formats/MCDLformat.o ../openbabel-master/src/formats/mol2format.o ../openbabel-master/src/formats/smilesformat.o ../openbabel-master/src/formats/svgformat.o ../openbabel-master/src/formats/xyzformat.o ../openbabel-master/src/math/align.o ../openbabel-master/src/math/matrix3x3.o ../openbabel-master/src/math/spacegroup.o ../openbabel-master/src/math/transform3d.o ../openbabel-master/src/math/vector3.o ../openbabel-master/src/ops/addfilename.o ../openbabel-master/src/ops/addinindex.o ../openbabel-master/src/ops/addnonpolarh.o ../openbabel-master/src/ops/addpolarh.o ../openbabel-master/src/ops/canonical.o ../openbabel-master/src/ops/changecell.o ../openbabel-master/src/ops/conformer.o ../openbabel-master/src/ops/delnonpolarh.o ../openbabel-master/src/ops/delpolarh.o ../openbabel-master/src/ops/fillUC.o ../openbabel-master/src/ops/forcefield.o ../openbabel-master/src/ops/gen2D.o ../openbabel-master/src/ops/gen3d.o ../openbabel-master/src/ops/largest.o ../openbabel-master/src/ops/loader.o ../openbabel-master/src/ops/neutralize.o ../openbabel-master/src/ops/opalign.o ../openbabel-master/src/ops/ophighlight.o ../openbabel-master/src/ops/opisomorph.o ../openbabel-master/src/ops/opsplit.o ../openbabel-master/src/ops/optransform.o ../openbabel-master/src/ops/partialcharges.o ../openbabel-master/src/ops/readconformers.o ../openbabel-master/src/ops/sort.o ../openbabel-master/src/ops/xout.o ../openbabel-master/src/stereo/cistrans.o ../openbabel-master/src/stereo/facade.o ../openbabel-master/src/stereo/gen3dstereohelper.o ../openbabel-master/src/stereo/perception.o ../openbabel-master/src/stereo/squareplanar.o ../openbabel-master/src/stereo/stereo.o ../openbabel-master/src/stereo/tetrahedral.o ../openbabel-master/src/stereo/tetranonplanar.o ../openbabel-master/src/stereo/tetraplanar.o ../openbabel-master/src/plugin.o ../openbabel-master/src/formats/abinitformat.o ../openbabel-master/src/formats/acesformat.o ../openbabel-master/src/formats/acrformat.o ../openbabel-master/src/formats/adfformat.o ../openbabel-master/src/formats/alchemyformat.o ../openbabel-master/src/formats/amberformat.o ../openbabel-master/src/formats/aoforceformat.o ../openbabel-master/src/formats/asciiformat.o ../openbabel-master/src/formats/balstformat.o ../openbabel-master/src/formats/bgfformat.o ../openbabel-master/src/formats/boxformat.o ../openbabel-master/src/formats/cacaoformat.o ../openbabel-master/src/formats/cacheformat.o ../openbabel-master/src/formats/carformat.o ../openbabel-master/src/formats/castepformat.o ../openbabel-master/src/formats/cccformat.o ../openbabel-master/src/formats/chemdrawcdx.o ../openbabel-master/src/formats/chemdrawct.o ../openbabel-master/src/formats/chemkinformat.o ../openbabel-master/src/formats/cifformat.o ../openbabel-master/src/formats/cofformat.o ../openbabel-master/src/formats/confabreport.o ../openbabel-master/src/formats/copyformat.o ../openbabel-master/src/formats/crkformat.o ../openbabel-master/src/formats/crystal09format.o ../openbabel-master/src/formats/CSRformat.o ../openbabel-master/src/formats/cssrformat.o ../openbabel-master/src/formats/daltonformat.o ../openbabel-master/src/formats/dlpolyformat.o ../openbabel-master/src/formats/dmolformat.o ../openbabel-master/src/formats/fastaformat.o ../openbabel-master/src/formats/fastsearchformat.o ../openbabel-master/src/formats/featformat.o ../openbabel-master/src/formats/fhformat.o ../openbabel-master/src/formats/fhiaimsformat.o ../openbabel-master/src/formats/freefracformat.o ../openbabel-master/src/formats/gamessformat.o ../openbabel-master/src/formats/genbankformat.o ../openbabel-master/src/formats/getinchi.o ../openbabel-master/src/formats/ghemicalformat.o ../openbabel-master/src/formats/groformat.o ../openbabel-master/src/formats/gromos96format.o ../openbabel-master/src/formats/gulpformat.o ../openbabel-master/src/formats/hinformat.o ../openbabel-master/src/formats/jaguarformat.o ../openbabel-master/src/formats/lmpdatformat.o ../openbabel-master/src/formats/lpmdformat.o ../openbabel-master/src/formats/mdffformat.o ../openbabel-master/src/formats/mdlformat.o ../openbabel-master/src/formats/mmcifformat.o ../openbabel-master/src/formats/mmodformat.o ../openbabel-master/src/formats/MNAformat.o ../openbabel-master/src/formats/moldenformat.o ../openbabel-master/src/formats/molproformat.o ../openbabel-master/src/formats/molreport.o ../openbabel-master/src/formats/mopacformat.o ../openbabel-master/src/formats/mpdformat.o ../openbabel-master/src/formats/mpqcformat.o ../openbabel-master/src/formats/msiformat.o ../openbabel-master/src/formats/msmsformat.o ../openbabel-master/src/formats/nulformat.o ../openbabel-master/src/formats/nwchemformat.o ../openbabel-master/src/formats/opendxformat.o ../openbabel-master/src/formats/outformat.o ../openbabel-master/src/formats/painterformat.o ../openbabel-master/src/formats/pcmodelformat.o ../openbabel-master/src/formats/pdbformat.o ../openbabel-master/src/formats/pdbqtformat.o ../openbabel-master/src/formats/pointcloudformat.o ../openbabel-master/src/formats/posformat.o ../openbabel-master/src/formats/povrayformat.o ../openbabel-master/src/formats/pqrformat.o ../openbabel-master/src/formats/PQSformat.o ../openbabel-master/src/formats/pwscfformat.o ../openbabel-master/src/formats/qchemformat.o ../openbabel-master/src/formats/reportformat.o ../openbabel-master/src/formats/rinchiformat.o ../openbabel-master/src/formats/rsmiformat.o ../openbabel-master/src/formats/rxnformat.o ../openbabel-master/src/formats/shelxformat.o ../openbabel-master/src/formats/siestaformat.o ../openbabel-master/src/formats/smileyformat.o ../openbabel-master/src/formats/stlformat.o ../openbabel-master/src/formats/textformat.o ../openbabel-master/src/formats/thermoformat.o ../openbabel-master/src/formats/tinkerformat.o ../openbabel-master/src/formats/titleformat.o ../openbabel-master/src/formats/turbomoleformat.o ../openbabel-master/src/formats/unichemformat.o ../openbabel-master/src/formats/vaspformat.o ../openbabel-master/src/formats/viewmolformat.o ../openbabel-master/src/formats/wlnformat.o ../openbabel-master/src/formats/wln-nextmove.o ../openbabel-master/src/formats/xedformat.o ../openbabel-master/src/formats/xsfformat.o ../openbabel-master/src/formats/yasaraformat.o ../openbabel-master/src/formats/zindoformat.o ../openbabel-master/src/forcefields/forcefieldgaff.o ../openbabel-master/src/forcefields/forcefieldghemical.o ../openbabel-master/src/forcefields/forcefieldmmff94.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -static
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"../openbabel-master/include" -I"../"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++" -I"../openbabel-master/include" -I"../"
+BIN      = MARS-PLUS.exe
+CXXFLAGS = $(CXXINCS) -ansi -std=c++11 -static
+CFLAGS   = $(INCS) -ansi -std=c++11 -static
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+src/main.o: src/main.cpp
+	$(CPP) -c src/main.cpp -o src/main.o $(CXXFLAGS)
+
+src/CASES_IL.o: src/CASES_IL.cpp
+	$(CPP) -c src/CASES_IL.cpp -o src/CASES_IL.o $(CXXFLAGS)
+
+src/CASES_IL_INDEPENDENT.o: src/CASES_IL_INDEPENDENT.cpp
+	$(CPP) -c src/CASES_IL_INDEPENDENT.cpp -o src/CASES_IL_INDEPENDENT.o $(CXXFLAGS)
+
+src/CASES_NEU.o: src/CASES_NEU.cpp
+	$(CPP) -c src/CASES_NEU.cpp -o src/CASES_NEU.o $(CXXFLAGS)
+
+src/ELEMENTS.o: src/ELEMENTS.cpp
+	$(CPP) -c src/ELEMENTS.cpp -o src/ELEMENTS.o $(CXXFLAGS)
+
+src/IL.o: src/IL.cpp
+	$(CPP) -c src/IL.cpp -o src/IL.o $(CXXFLAGS)
+
+src/MOLECULE.o: src/MOLECULE.cpp
+	$(CPP) -c src/MOLECULE.cpp -o src/MOLECULE.o $(CXXFLAGS)
+
+src/UTILITY.o: src/UTILITY.cpp
+	$(CPP) -c src/UTILITY.cpp -o src/UTILITY.o $(CXXFLAGS)
+
+../openbabel-master/src/alias.o: ../openbabel-master/src/alias.cpp
+	$(CPP) -c ../openbabel-master/src/alias.cpp -o ../openbabel-master/src/alias.o $(CXXFLAGS)
+
+../openbabel-master/src/atom.o: ../openbabel-master/src/atom.cpp
+	$(CPP) -c ../openbabel-master/src/atom.cpp -o ../openbabel-master/src/atom.o $(CXXFLAGS)
+
+../openbabel-master/src/base.o: ../openbabel-master/src/base.cpp
+	$(CPP) -c ../openbabel-master/src/base.cpp -o ../openbabel-master/src/base.o $(CXXFLAGS)
+
+../openbabel-master/src/bitvec.o: ../openbabel-master/src/bitvec.cpp
+	$(CPP) -c ../openbabel-master/src/bitvec.cpp -o ../openbabel-master/src/bitvec.o $(CXXFLAGS)
+
+../openbabel-master/src/bond.o: ../openbabel-master/src/bond.cpp
+	$(CPP) -c ../openbabel-master/src/bond.cpp -o ../openbabel-master/src/bond.o $(CXXFLAGS)
+
+../openbabel-master/src/bondtyper.o: ../openbabel-master/src/bondtyper.cpp
+	$(CPP) -c ../openbabel-master/src/bondtyper.cpp -o ../openbabel-master/src/bondtyper.o $(CXXFLAGS)
+
+../openbabel-master/src/builder.o: ../openbabel-master/src/builder.cpp
+	$(CPP) -c ../openbabel-master/src/builder.cpp -o ../openbabel-master/src/builder.o $(CXXFLAGS)
+
+../openbabel-master/src/canon.o: ../openbabel-master/src/canon.cpp
+	$(CPP) -c ../openbabel-master/src/canon.cpp -o ../openbabel-master/src/canon.o $(CXXFLAGS)
+
+../openbabel-master/src/chains.o: ../openbabel-master/src/chains.cpp
+	$(CPP) -c ../openbabel-master/src/chains.cpp -o ../openbabel-master/src/chains.o $(CXXFLAGS)
+
+../openbabel-master/src/chargemodel.o: ../openbabel-master/src/chargemodel.cpp
+	$(CPP) -c ../openbabel-master/src/chargemodel.cpp -o ../openbabel-master/src/chargemodel.o $(CXXFLAGS)
+
+../openbabel-master/src/conformersearch.o: ../openbabel-master/src/conformersearch.cpp
+	$(CPP) -c ../openbabel-master/src/conformersearch.cpp -o ../openbabel-master/src/conformersearch.o $(CXXFLAGS)
+
+../openbabel-master/src/data.o: ../openbabel-master/src/data.cpp
+	$(CPP) -c ../openbabel-master/src/data.cpp -o ../openbabel-master/src/data.o $(CXXFLAGS)
+
+../openbabel-master/src/data_utilities.o: ../openbabel-master/src/data_utilities.cpp
+	$(CPP) -c ../openbabel-master/src/data_utilities.cpp -o ../openbabel-master/src/data_utilities.o $(CXXFLAGS)
+
+../openbabel-master/src/descriptor.o: ../openbabel-master/src/descriptor.cpp
+	$(CPP) -c ../openbabel-master/src/descriptor.cpp -o ../openbabel-master/src/descriptor.o $(CXXFLAGS)
+
+../openbabel-master/src/distgeom.o: ../openbabel-master/src/distgeom.cpp
+	$(CPP) -c ../openbabel-master/src/distgeom.cpp -o ../openbabel-master/src/distgeom.o $(CXXFLAGS)
+
+../openbabel-master/src/dlhandler_win32.o: ../openbabel-master/src/dlhandler_win32.cpp
+	$(CPP) -c ../openbabel-master/src/dlhandler_win32.cpp -o ../openbabel-master/src/dlhandler_win32.o $(CXXFLAGS)
+
+../openbabel-master/src/doxygen_pages.o: ../openbabel-master/src/doxygen_pages.cpp
+	$(CPP) -c ../openbabel-master/src/doxygen_pages.cpp -o ../openbabel-master/src/doxygen_pages.o $(CXXFLAGS)
+
+../openbabel-master/src/elements.o: ../openbabel-master/src/elements.cpp
+	$(CPP) -c ../openbabel-master/src/elements.cpp -o ../openbabel-master/src/elements.o $(CXXFLAGS)
+
+../openbabel-master/src/fingerprint.o: ../openbabel-master/src/fingerprint.cpp
+	$(CPP) -c ../openbabel-master/src/fingerprint.cpp -o ../openbabel-master/src/fingerprint.o $(CXXFLAGS)
+
+../openbabel-master/src/forcefield.o: ../openbabel-master/src/forcefield.cpp
+	$(CPP) -c ../openbabel-master/src/forcefield.cpp -o ../openbabel-master/src/forcefield.o $(CXXFLAGS)
+
+../openbabel-master/src/format.o: ../openbabel-master/src/format.cpp
+	$(CPP) -c ../openbabel-master/src/format.cpp -o ../openbabel-master/src/format.o $(CXXFLAGS)
+
+../openbabel-master/src/generic.o: ../openbabel-master/src/generic.cpp
+	$(CPP) -c ../openbabel-master/src/generic.cpp -o ../openbabel-master/src/generic.o $(CXXFLAGS)
+
+../openbabel-master/src/graphsym.o: ../openbabel-master/src/graphsym.cpp
+	$(CPP) -c ../openbabel-master/src/graphsym.cpp -o ../openbabel-master/src/graphsym.o $(CXXFLAGS)
+
+../openbabel-master/src/grid.o: ../openbabel-master/src/grid.cpp
+	$(CPP) -c ../openbabel-master/src/grid.cpp -o ../openbabel-master/src/grid.o $(CXXFLAGS)
+
+../openbabel-master/src/griddata.o: ../openbabel-master/src/griddata.cpp
+	$(CPP) -c ../openbabel-master/src/griddata.cpp -o ../openbabel-master/src/griddata.o $(CXXFLAGS)
+
+../openbabel-master/src/isomorphism.o: ../openbabel-master/src/isomorphism.cpp
+	$(CPP) -c ../openbabel-master/src/isomorphism.cpp -o ../openbabel-master/src/isomorphism.o $(CXXFLAGS)
+
+../openbabel-master/src/kekulize.o: ../openbabel-master/src/kekulize.cpp
+	$(CPP) -c ../openbabel-master/src/kekulize.cpp -o ../openbabel-master/src/kekulize.o $(CXXFLAGS)
+
+../openbabel-master/src/locale.o: ../openbabel-master/src/locale.cpp
+	$(CPP) -c ../openbabel-master/src/locale.cpp -o ../openbabel-master/src/locale.o $(CXXFLAGS)
+
+../openbabel-master/src/matrix.o: ../openbabel-master/src/matrix.cpp
+	$(CPP) -c ../openbabel-master/src/matrix.cpp -o ../openbabel-master/src/matrix.o $(CXXFLAGS)
+
+../openbabel-master/src/mcdlutil.o: ../openbabel-master/src/mcdlutil.cpp
+	$(CPP) -c ../openbabel-master/src/mcdlutil.cpp -o ../openbabel-master/src/mcdlutil.o $(CXXFLAGS)
+
+../openbabel-master/src/memcpy.o: ../openbabel-master/src/memcpy.c
+	$(CPP) -c ../openbabel-master/src/memcpy.c -o ../openbabel-master/src/memcpy.o $(CXXFLAGS)
+
+../openbabel-master/src/mol.o: ../openbabel-master/src/mol.cpp
+	$(CPP) -c ../openbabel-master/src/mol.cpp -o ../openbabel-master/src/mol.o $(CXXFLAGS)
+
+../openbabel-master/src/molchrg.o: ../openbabel-master/src/molchrg.cpp
+	$(CPP) -c ../openbabel-master/src/molchrg.cpp -o ../openbabel-master/src/molchrg.o $(CXXFLAGS)
+
+../openbabel-master/src/obconversion.o: ../openbabel-master/src/obconversion.cpp
+	$(CPP) -c ../openbabel-master/src/obconversion.cpp -o ../openbabel-master/src/obconversion.o $(CXXFLAGS)
+
+../openbabel-master/src/oberror.o: ../openbabel-master/src/oberror.cpp
+	$(CPP) -c ../openbabel-master/src/oberror.cpp -o ../openbabel-master/src/oberror.o $(CXXFLAGS)
+
+../openbabel-master/src/obfunctions.o: ../openbabel-master/src/obfunctions.cpp
+	$(CPP) -c ../openbabel-master/src/obfunctions.cpp -o ../openbabel-master/src/obfunctions.o $(CXXFLAGS)
+
+../openbabel-master/src/obiter.o: ../openbabel-master/src/obiter.cpp
+	$(CPP) -c ../openbabel-master/src/obiter.cpp -o ../openbabel-master/src/obiter.o $(CXXFLAGS)
+
+../openbabel-master/src/obmolecformat.o: ../openbabel-master/src/obmolecformat.cpp
+	$(CPP) -c ../openbabel-master/src/obmolecformat.cpp -o ../openbabel-master/src/obmolecformat.o $(CXXFLAGS)
+
+../openbabel-master/src/obutil.o: ../openbabel-master/src/obutil.cpp
+	$(CPP) -c ../openbabel-master/src/obutil.cpp -o ../openbabel-master/src/obutil.o $(CXXFLAGS)
+
+../openbabel-master/src/op.o: ../openbabel-master/src/op.cpp
+	$(CPP) -c ../openbabel-master/src/op.cpp -o ../openbabel-master/src/op.o $(CXXFLAGS)
+
+../openbabel-master/src/parsmart.o: ../openbabel-master/src/parsmart.cpp
+	$(CPP) -c ../openbabel-master/src/parsmart.cpp -o ../openbabel-master/src/parsmart.o $(CXXFLAGS)
+
+../openbabel-master/src/patty.o: ../openbabel-master/src/patty.cpp
+	$(CPP) -c ../openbabel-master/src/patty.cpp -o ../openbabel-master/src/patty.o $(CXXFLAGS)
+
+../openbabel-master/src/phmodel.o: ../openbabel-master/src/phmodel.cpp
+	$(CPP) -c ../openbabel-master/src/phmodel.cpp -o ../openbabel-master/src/phmodel.o $(CXXFLAGS)
+
+../openbabel-master/src/pointgroup.o: ../openbabel-master/src/pointgroup.cpp
+	$(CPP) -c ../openbabel-master/src/pointgroup.cpp -o ../openbabel-master/src/pointgroup.o $(CXXFLAGS)
+
+../openbabel-master/src/query.o: ../openbabel-master/src/query.cpp
+	$(CPP) -c ../openbabel-master/src/query.cpp -o ../openbabel-master/src/query.o $(CXXFLAGS)
+
+../openbabel-master/src/rand.o: ../openbabel-master/src/rand.cpp
+	$(CPP) -c ../openbabel-master/src/rand.cpp -o ../openbabel-master/src/rand.o $(CXXFLAGS)
+
+../openbabel-master/src/RDKitConv.o: ../openbabel-master/src/RDKitConv.cpp
+	$(CPP) -c ../openbabel-master/src/RDKitConv.cpp -o ../openbabel-master/src/RDKitConv.o $(CXXFLAGS)
+
+../openbabel-master/src/reactionfacade.o: ../openbabel-master/src/reactionfacade.cpp
+	$(CPP) -c ../openbabel-master/src/reactionfacade.cpp -o ../openbabel-master/src/reactionfacade.o $(CXXFLAGS)
+
+../openbabel-master/src/residue.o: ../openbabel-master/src/residue.cpp
+	$(CPP) -c ../openbabel-master/src/residue.cpp -o ../openbabel-master/src/residue.o $(CXXFLAGS)
+
+../openbabel-master/src/ring.o: ../openbabel-master/src/ring.cpp
+	$(CPP) -c ../openbabel-master/src/ring.cpp -o ../openbabel-master/src/ring.o $(CXXFLAGS)
+
+../openbabel-master/src/rotamer.o: ../openbabel-master/src/rotamer.cpp
+	$(CPP) -c ../openbabel-master/src/rotamer.cpp -o ../openbabel-master/src/rotamer.o $(CXXFLAGS)
+
+../openbabel-master/src/rotor.o: ../openbabel-master/src/rotor.cpp
+	$(CPP) -c ../openbabel-master/src/rotor.cpp -o ../openbabel-master/src/rotor.o $(CXXFLAGS)
+
+../openbabel-master/src/spectrophore.o: ../openbabel-master/src/spectrophore.cpp
+	$(CPP) -c ../openbabel-master/src/spectrophore.cpp -o ../openbabel-master/src/spectrophore.o $(CXXFLAGS)
+
+../openbabel-master/src/strncasecmp.o: ../openbabel-master/src/strncasecmp.c
+	$(CPP) -c ../openbabel-master/src/strncasecmp.c -o ../openbabel-master/src/strncasecmp.o $(CXXFLAGS)
+
+../openbabel-master/src/tautomer.o: ../openbabel-master/src/tautomer.cpp
+	$(CPP) -c ../openbabel-master/src/tautomer.cpp -o ../openbabel-master/src/tautomer.o $(CXXFLAGS)
+
+../openbabel-master/src/tokenst.o: ../openbabel-master/src/tokenst.cpp
+	$(CPP) -c ../openbabel-master/src/tokenst.cpp -o ../openbabel-master/src/tokenst.o $(CXXFLAGS)
+
+../openbabel-master/src/transform.o: ../openbabel-master/src/transform.cpp
+	$(CPP) -c ../openbabel-master/src/transform.cpp -o ../openbabel-master/src/transform.o $(CXXFLAGS)
+
+../openbabel-master/src/typer.o: ../openbabel-master/src/typer.cpp
+	$(CPP) -c ../openbabel-master/src/typer.cpp -o ../openbabel-master/src/typer.o $(CXXFLAGS)
+
+../openbabel-master/src/charges/eem.o: ../openbabel-master/src/charges/eem.cpp
+	$(CPP) -c ../openbabel-master/src/charges/eem.cpp -o ../openbabel-master/src/charges/eem.o $(CXXFLAGS)
+
+../openbabel-master/src/charges/eqeq.o: ../openbabel-master/src/charges/eqeq.cpp
+	$(CPP) -c ../openbabel-master/src/charges/eqeq.cpp -o ../openbabel-master/src/charges/eqeq.o $(CXXFLAGS)
+
+../openbabel-master/src/charges/fromfile.o: ../openbabel-master/src/charges/fromfile.cpp
+	$(CPP) -c ../openbabel-master/src/charges/fromfile.cpp -o ../openbabel-master/src/charges/fromfile.o $(CXXFLAGS)
+
+../openbabel-master/src/charges/gasteiger.o: ../openbabel-master/src/charges/gasteiger.cpp
+	$(CPP) -c ../openbabel-master/src/charges/gasteiger.cpp -o ../openbabel-master/src/charges/gasteiger.o $(CXXFLAGS)
+
+../openbabel-master/src/charges/mmff94.o: ../openbabel-master/src/charges/mmff94.cpp
+	$(CPP) -c ../openbabel-master/src/charges/mmff94.cpp -o ../openbabel-master/src/charges/mmff94.o $(CXXFLAGS)
+
+../openbabel-master/src/charges/none.o: ../openbabel-master/src/charges/none.cpp
+	$(CPP) -c ../openbabel-master/src/charges/none.cpp -o ../openbabel-master/src/charges/none.o $(CXXFLAGS)
+
+../openbabel-master/src/charges/qeq.o: ../openbabel-master/src/charges/qeq.cpp
+	$(CPP) -c ../openbabel-master/src/charges/qeq.cpp -o ../openbabel-master/src/charges/qeq.o $(CXXFLAGS)
+
+../openbabel-master/src/charges/qtpie.o: ../openbabel-master/src/charges/qtpie.cpp
+	$(CPP) -c ../openbabel-master/src/charges/qtpie.cpp -o ../openbabel-master/src/charges/qtpie.o $(CXXFLAGS)
+
+../openbabel-master/src/depict/asciipainter.o: ../openbabel-master/src/depict/asciipainter.cpp
+	$(CPP) -c ../openbabel-master/src/depict/asciipainter.cpp -o ../openbabel-master/src/depict/asciipainter.o $(CXXFLAGS)
+
+../openbabel-master/src/depict/cairopainter.o: ../openbabel-master/src/depict/cairopainter.cpp
+	$(CPP) -c ../openbabel-master/src/depict/cairopainter.cpp -o ../openbabel-master/src/depict/cairopainter.o $(CXXFLAGS)
+
+../openbabel-master/src/depict/commandpainter.o: ../openbabel-master/src/depict/commandpainter.cpp
+	$(CPP) -c ../openbabel-master/src/depict/commandpainter.cpp -o ../openbabel-master/src/depict/commandpainter.o $(CXXFLAGS)
+
+../openbabel-master/src/depict/depict.o: ../openbabel-master/src/depict/depict.cpp
+	$(CPP) -c ../openbabel-master/src/depict/depict.cpp -o ../openbabel-master/src/depict/depict.o $(CXXFLAGS)
+
+../openbabel-master/src/depict/svgpainter.o: ../openbabel-master/src/depict/svgpainter.cpp
+	$(CPP) -c ../openbabel-master/src/depict/svgpainter.cpp -o ../openbabel-master/src/depict/svgpainter.o $(CXXFLAGS)
+
+../openbabel-master/src/descriptors/cansmidescriptor.o: ../openbabel-master/src/descriptors/cansmidescriptor.cpp
+	$(CPP) -c ../openbabel-master/src/descriptors/cansmidescriptor.cpp -o ../openbabel-master/src/descriptors/cansmidescriptor.o $(CXXFLAGS)
+
+../openbabel-master/src/descriptors/cmpdfilter.o: ../openbabel-master/src/descriptors/cmpdfilter.cpp
+	$(CPP) -c ../openbabel-master/src/descriptors/cmpdfilter.cpp -o ../openbabel-master/src/descriptors/cmpdfilter.o $(CXXFLAGS)
+
+../openbabel-master/src/descriptors/filters.o: ../openbabel-master/src/descriptors/filters.cpp
+	$(CPP) -c ../openbabel-master/src/descriptors/filters.cpp -o ../openbabel-master/src/descriptors/filters.o $(CXXFLAGS)
+
+../openbabel-master/src/descriptors/groupcontrib.o: ../openbabel-master/src/descriptors/groupcontrib.cpp
+	$(CPP) -c ../openbabel-master/src/descriptors/groupcontrib.cpp -o ../openbabel-master/src/descriptors/groupcontrib.o $(CXXFLAGS)
+
+../openbabel-master/src/descriptors/inchidescriptor.o: ../openbabel-master/src/descriptors/inchidescriptor.cpp
+	$(CPP) -c ../openbabel-master/src/descriptors/inchidescriptor.cpp -o ../openbabel-master/src/descriptors/inchidescriptor.o $(CXXFLAGS)
+
+../openbabel-master/src/descriptors/smartsdescriptors.o: ../openbabel-master/src/descriptors/smartsdescriptors.cpp
+	$(CPP) -c ../openbabel-master/src/descriptors/smartsdescriptors.cpp -o ../openbabel-master/src/descriptors/smartsdescriptors.o $(CXXFLAGS)
+
+../openbabel-master/src/fingerprints/finger2.o: ../openbabel-master/src/fingerprints/finger2.cpp
+	$(CPP) -c ../openbabel-master/src/fingerprints/finger2.cpp -o ../openbabel-master/src/fingerprints/finger2.o $(CXXFLAGS)
+
+../openbabel-master/src/fingerprints/finger3.o: ../openbabel-master/src/fingerprints/finger3.cpp
+	$(CPP) -c ../openbabel-master/src/fingerprints/finger3.cpp -o ../openbabel-master/src/fingerprints/finger3.o $(CXXFLAGS)
+
+../openbabel-master/src/fingerprints/fingerecfp.o: ../openbabel-master/src/fingerprints/fingerecfp.cpp
+	$(CPP) -c ../openbabel-master/src/fingerprints/fingerecfp.cpp -o ../openbabel-master/src/fingerprints/fingerecfp.o $(CXXFLAGS)
+
+../openbabel-master/src/forcefields/forcefielduff.o: ../openbabel-master/src/forcefields/forcefielduff.cpp
+	$(CPP) -c ../openbabel-master/src/forcefields/forcefielduff.cpp -o ../openbabel-master/src/forcefields/forcefielduff.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/APIInterface.o: ../openbabel-master/src/formats/APIInterface.cpp
+	$(CPP) -c ../openbabel-master/src/formats/APIInterface.cpp -o ../openbabel-master/src/formats/APIInterface.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/chem3dformat.o: ../openbabel-master/src/formats/chem3dformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/chem3dformat.cpp -o ../openbabel-master/src/formats/chem3dformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/chemtoolformat.o: ../openbabel-master/src/formats/chemtoolformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/chemtoolformat.cpp -o ../openbabel-master/src/formats/chemtoolformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/exyzformat.o: ../openbabel-master/src/formats/exyzformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/exyzformat.cpp -o ../openbabel-master/src/formats/exyzformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/fchkformat.o: ../openbabel-master/src/formats/fchkformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/fchkformat.cpp -o ../openbabel-master/src/formats/fchkformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/fingerprintformat.o: ../openbabel-master/src/formats/fingerprintformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/fingerprintformat.cpp -o ../openbabel-master/src/formats/fingerprintformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/fpsformat.o: ../openbabel-master/src/formats/fpsformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/fpsformat.cpp -o ../openbabel-master/src/formats/fpsformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/gausscubeformat.o: ../openbabel-master/src/formats/gausscubeformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/gausscubeformat.cpp -o ../openbabel-master/src/formats/gausscubeformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/gaussformat.o: ../openbabel-master/src/formats/gaussformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/gaussformat.cpp -o ../openbabel-master/src/formats/gaussformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/gausszmatformat.o: ../openbabel-master/src/formats/gausszmatformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/gausszmatformat.cpp -o ../openbabel-master/src/formats/gausszmatformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/MCDLformat.o: ../openbabel-master/src/formats/MCDLformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/MCDLformat.cpp -o ../openbabel-master/src/formats/MCDLformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/mol2format.o: ../openbabel-master/src/formats/mol2format.cpp
+	$(CPP) -c ../openbabel-master/src/formats/mol2format.cpp -o ../openbabel-master/src/formats/mol2format.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/smilesformat.o: ../openbabel-master/src/formats/smilesformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/smilesformat.cpp -o ../openbabel-master/src/formats/smilesformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/svgformat.o: ../openbabel-master/src/formats/svgformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/svgformat.cpp -o ../openbabel-master/src/formats/svgformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/xyzformat.o: ../openbabel-master/src/formats/xyzformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/xyzformat.cpp -o ../openbabel-master/src/formats/xyzformat.o $(CXXFLAGS)
+
+../openbabel-master/src/math/align.o: ../openbabel-master/src/math/align.cpp
+	$(CPP) -c ../openbabel-master/src/math/align.cpp -o ../openbabel-master/src/math/align.o $(CXXFLAGS)
+
+../openbabel-master/src/math/matrix3x3.o: ../openbabel-master/src/math/matrix3x3.cpp
+	$(CPP) -c ../openbabel-master/src/math/matrix3x3.cpp -o ../openbabel-master/src/math/matrix3x3.o $(CXXFLAGS)
+
+../openbabel-master/src/math/spacegroup.o: ../openbabel-master/src/math/spacegroup.cpp
+	$(CPP) -c ../openbabel-master/src/math/spacegroup.cpp -o ../openbabel-master/src/math/spacegroup.o $(CXXFLAGS)
+
+../openbabel-master/src/math/transform3d.o: ../openbabel-master/src/math/transform3d.cpp
+	$(CPP) -c ../openbabel-master/src/math/transform3d.cpp -o ../openbabel-master/src/math/transform3d.o $(CXXFLAGS)
+
+../openbabel-master/src/math/vector3.o: ../openbabel-master/src/math/vector3.cpp
+	$(CPP) -c ../openbabel-master/src/math/vector3.cpp -o ../openbabel-master/src/math/vector3.o $(CXXFLAGS)
+
+../openbabel-master/src/ops/addfilename.o: ../openbabel-master/src/ops/addfilename.cpp
+	$(CPP) -c ../openbabel-master/src/ops/addfilename.cpp -o ../openbabel-master/src/ops/addfilename.o $(CXXFLAGS)
+
+../openbabel-master/src/ops/addinindex.o: ../openbabel-master/src/ops/addinindex.cpp
+	$(CPP) -c ../openbabel-master/src/ops/addinindex.cpp -o ../openbabel-master/src/ops/addinindex.o $(CXXFLAGS)
+
+../openbabel-master/src/ops/addnonpolarh.o: ../openbabel-master/src/ops/addnonpolarh.cpp
+	$(CPP) -c ../openbabel-master/src/ops/addnonpolarh.cpp -o ../openbabel-master/src/ops/addnonpolarh.o $(CXXFLAGS)
+
+../openbabel-master/src/ops/addpolarh.o: ../openbabel-master/src/ops/addpolarh.cpp
+	$(CPP) -c ../openbabel-master/src/ops/addpolarh.cpp -o ../openbabel-master/src/ops/addpolarh.o $(CXXFLAGS)
+
+../openbabel-master/src/ops/canonical.o: ../openbabel-master/src/ops/canonical.cpp
+	$(CPP) -c ../openbabel-master/src/ops/canonical.cpp -o ../openbabel-master/src/ops/canonical.o $(CXXFLAGS)
+
+../openbabel-master/src/ops/changecell.o: ../openbabel-master/src/ops/changecell.cpp
+	$(CPP) -c ../openbabel-master/src/ops/changecell.cpp -o ../openbabel-master/src/ops/changecell.o $(CXXFLAGS)
+
+../openbabel-master/src/ops/conformer.o: ../openbabel-master/src/ops/conformer.cpp
+	$(CPP) -c ../openbabel-master/src/ops/conformer.cpp -o ../openbabel-master/src/ops/conformer.o $(CXXFLAGS)
+
+../openbabel-master/src/ops/delnonpolarh.o: ../openbabel-master/src/ops/delnonpolarh.cpp
+	$(CPP) -c ../openbabel-master/src/ops/delnonpolarh.cpp -o ../openbabel-master/src/ops/delnonpolarh.o $(CXXFLAGS)
+
+../openbabel-master/src/ops/delpolarh.o: ../openbabel-master/src/ops/delpolarh.cpp
+	$(CPP) -c ../openbabel-master/src/ops/delpolarh.cpp -o ../openbabel-master/src/ops/delpolarh.o $(CXXFLAGS)
+
+../openbabel-master/src/ops/fillUC.o: ../openbabel-master/src/ops/fillUC.cpp
+	$(CPP) -c ../openbabel-master/src/ops/fillUC.cpp -o ../openbabel-master/src/ops/fillUC.o $(CXXFLAGS)
+
+../openbabel-master/src/ops/forcefield.o: ../openbabel-master/src/ops/forcefield.cpp
+	$(CPP) -c ../openbabel-master/src/ops/forcefield.cpp -o ../openbabel-master/src/ops/forcefield.o $(CXXFLAGS)
+
+../openbabel-master/src/ops/gen2D.o: ../openbabel-master/src/ops/gen2D.cpp
+	$(CPP) -c ../openbabel-master/src/ops/gen2D.cpp -o ../openbabel-master/src/ops/gen2D.o $(CXXFLAGS)
+
+../openbabel-master/src/ops/gen3d.o: ../openbabel-master/src/ops/gen3d.cpp
+	$(CPP) -c ../openbabel-master/src/ops/gen3d.cpp -o ../openbabel-master/src/ops/gen3d.o $(CXXFLAGS)
+
+../openbabel-master/src/ops/largest.o: ../openbabel-master/src/ops/largest.cpp
+	$(CPP) -c ../openbabel-master/src/ops/largest.cpp -o ../openbabel-master/src/ops/largest.o $(CXXFLAGS)
+
+../openbabel-master/src/ops/loader.o: ../openbabel-master/src/ops/loader.cpp
+	$(CPP) -c ../openbabel-master/src/ops/loader.cpp -o ../openbabel-master/src/ops/loader.o $(CXXFLAGS)
+
+../openbabel-master/src/ops/neutralize.o: ../openbabel-master/src/ops/neutralize.cpp
+	$(CPP) -c ../openbabel-master/src/ops/neutralize.cpp -o ../openbabel-master/src/ops/neutralize.o $(CXXFLAGS)
+
+../openbabel-master/src/ops/opalign.o: ../openbabel-master/src/ops/opalign.cpp
+	$(CPP) -c ../openbabel-master/src/ops/opalign.cpp -o ../openbabel-master/src/ops/opalign.o $(CXXFLAGS)
+
+../openbabel-master/src/ops/ophighlight.o: ../openbabel-master/src/ops/ophighlight.cpp
+	$(CPP) -c ../openbabel-master/src/ops/ophighlight.cpp -o ../openbabel-master/src/ops/ophighlight.o $(CXXFLAGS)
+
+../openbabel-master/src/ops/opisomorph.o: ../openbabel-master/src/ops/opisomorph.cpp
+	$(CPP) -c ../openbabel-master/src/ops/opisomorph.cpp -o ../openbabel-master/src/ops/opisomorph.o $(CXXFLAGS)
+
+../openbabel-master/src/ops/opsplit.o: ../openbabel-master/src/ops/opsplit.cpp
+	$(CPP) -c ../openbabel-master/src/ops/opsplit.cpp -o ../openbabel-master/src/ops/opsplit.o $(CXXFLAGS)
+
+../openbabel-master/src/ops/optransform.o: ../openbabel-master/src/ops/optransform.cpp
+	$(CPP) -c ../openbabel-master/src/ops/optransform.cpp -o ../openbabel-master/src/ops/optransform.o $(CXXFLAGS)
+
+../openbabel-master/src/ops/partialcharges.o: ../openbabel-master/src/ops/partialcharges.cpp
+	$(CPP) -c ../openbabel-master/src/ops/partialcharges.cpp -o ../openbabel-master/src/ops/partialcharges.o $(CXXFLAGS)
+
+../openbabel-master/src/ops/readconformers.o: ../openbabel-master/src/ops/readconformers.cpp
+	$(CPP) -c ../openbabel-master/src/ops/readconformers.cpp -o ../openbabel-master/src/ops/readconformers.o $(CXXFLAGS)
+
+../openbabel-master/src/ops/sort.o: ../openbabel-master/src/ops/sort.cpp
+	$(CPP) -c ../openbabel-master/src/ops/sort.cpp -o ../openbabel-master/src/ops/sort.o $(CXXFLAGS)
+
+../openbabel-master/src/ops/xout.o: ../openbabel-master/src/ops/xout.cpp
+	$(CPP) -c ../openbabel-master/src/ops/xout.cpp -o ../openbabel-master/src/ops/xout.o $(CXXFLAGS)
+
+../openbabel-master/src/stereo/cistrans.o: ../openbabel-master/src/stereo/cistrans.cpp
+	$(CPP) -c ../openbabel-master/src/stereo/cistrans.cpp -o ../openbabel-master/src/stereo/cistrans.o $(CXXFLAGS)
+
+../openbabel-master/src/stereo/facade.o: ../openbabel-master/src/stereo/facade.cpp
+	$(CPP) -c ../openbabel-master/src/stereo/facade.cpp -o ../openbabel-master/src/stereo/facade.o $(CXXFLAGS)
+
+../openbabel-master/src/stereo/gen3dstereohelper.o: ../openbabel-master/src/stereo/gen3dstereohelper.cpp
+	$(CPP) -c ../openbabel-master/src/stereo/gen3dstereohelper.cpp -o ../openbabel-master/src/stereo/gen3dstereohelper.o $(CXXFLAGS)
+
+../openbabel-master/src/stereo/perception.o: ../openbabel-master/src/stereo/perception.cpp
+	$(CPP) -c ../openbabel-master/src/stereo/perception.cpp -o ../openbabel-master/src/stereo/perception.o $(CXXFLAGS)
+
+../openbabel-master/src/stereo/squareplanar.o: ../openbabel-master/src/stereo/squareplanar.cpp
+	$(CPP) -c ../openbabel-master/src/stereo/squareplanar.cpp -o ../openbabel-master/src/stereo/squareplanar.o $(CXXFLAGS)
+
+../openbabel-master/src/stereo/stereo.o: ../openbabel-master/src/stereo/stereo.cpp
+	$(CPP) -c ../openbabel-master/src/stereo/stereo.cpp -o ../openbabel-master/src/stereo/stereo.o $(CXXFLAGS)
+
+../openbabel-master/src/stereo/tetrahedral.o: ../openbabel-master/src/stereo/tetrahedral.cpp
+	$(CPP) -c ../openbabel-master/src/stereo/tetrahedral.cpp -o ../openbabel-master/src/stereo/tetrahedral.o $(CXXFLAGS)
+
+../openbabel-master/src/stereo/tetranonplanar.o: ../openbabel-master/src/stereo/tetranonplanar.cpp
+	$(CPP) -c ../openbabel-master/src/stereo/tetranonplanar.cpp -o ../openbabel-master/src/stereo/tetranonplanar.o $(CXXFLAGS)
+
+../openbabel-master/src/stereo/tetraplanar.o: ../openbabel-master/src/stereo/tetraplanar.cpp
+	$(CPP) -c ../openbabel-master/src/stereo/tetraplanar.cpp -o ../openbabel-master/src/stereo/tetraplanar.o $(CXXFLAGS)
+
+../openbabel-master/src/plugin.o: ../openbabel-master/src/plugin.cpp
+	$(CPP) -c ../openbabel-master/src/plugin.cpp -o ../openbabel-master/src/plugin.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/abinitformat.o: ../openbabel-master/src/formats/abinitformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/abinitformat.cpp -o ../openbabel-master/src/formats/abinitformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/acesformat.o: ../openbabel-master/src/formats/acesformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/acesformat.cpp -o ../openbabel-master/src/formats/acesformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/acrformat.o: ../openbabel-master/src/formats/acrformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/acrformat.cpp -o ../openbabel-master/src/formats/acrformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/adfformat.o: ../openbabel-master/src/formats/adfformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/adfformat.cpp -o ../openbabel-master/src/formats/adfformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/alchemyformat.o: ../openbabel-master/src/formats/alchemyformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/alchemyformat.cpp -o ../openbabel-master/src/formats/alchemyformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/amberformat.o: ../openbabel-master/src/formats/amberformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/amberformat.cpp -o ../openbabel-master/src/formats/amberformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/aoforceformat.o: ../openbabel-master/src/formats/aoforceformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/aoforceformat.cpp -o ../openbabel-master/src/formats/aoforceformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/asciiformat.o: ../openbabel-master/src/formats/asciiformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/asciiformat.cpp -o ../openbabel-master/src/formats/asciiformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/balstformat.o: ../openbabel-master/src/formats/balstformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/balstformat.cpp -o ../openbabel-master/src/formats/balstformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/bgfformat.o: ../openbabel-master/src/formats/bgfformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/bgfformat.cpp -o ../openbabel-master/src/formats/bgfformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/boxformat.o: ../openbabel-master/src/formats/boxformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/boxformat.cpp -o ../openbabel-master/src/formats/boxformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/cacaoformat.o: ../openbabel-master/src/formats/cacaoformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/cacaoformat.cpp -o ../openbabel-master/src/formats/cacaoformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/cacheformat.o: ../openbabel-master/src/formats/cacheformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/cacheformat.cpp -o ../openbabel-master/src/formats/cacheformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/carformat.o: ../openbabel-master/src/formats/carformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/carformat.cpp -o ../openbabel-master/src/formats/carformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/castepformat.o: ../openbabel-master/src/formats/castepformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/castepformat.cpp -o ../openbabel-master/src/formats/castepformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/cccformat.o: ../openbabel-master/src/formats/cccformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/cccformat.cpp -o ../openbabel-master/src/formats/cccformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/chemdrawcdx.o: ../openbabel-master/src/formats/chemdrawcdx.cpp
+	$(CPP) -c ../openbabel-master/src/formats/chemdrawcdx.cpp -o ../openbabel-master/src/formats/chemdrawcdx.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/chemdrawct.o: ../openbabel-master/src/formats/chemdrawct.cpp
+	$(CPP) -c ../openbabel-master/src/formats/chemdrawct.cpp -o ../openbabel-master/src/formats/chemdrawct.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/chemkinformat.o: ../openbabel-master/src/formats/chemkinformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/chemkinformat.cpp -o ../openbabel-master/src/formats/chemkinformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/cifformat.o: ../openbabel-master/src/formats/cifformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/cifformat.cpp -o ../openbabel-master/src/formats/cifformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/cofformat.o: ../openbabel-master/src/formats/cofformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/cofformat.cpp -o ../openbabel-master/src/formats/cofformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/confabreport.o: ../openbabel-master/src/formats/confabreport.cpp
+	$(CPP) -c ../openbabel-master/src/formats/confabreport.cpp -o ../openbabel-master/src/formats/confabreport.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/copyformat.o: ../openbabel-master/src/formats/copyformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/copyformat.cpp -o ../openbabel-master/src/formats/copyformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/crkformat.o: ../openbabel-master/src/formats/crkformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/crkformat.cpp -o ../openbabel-master/src/formats/crkformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/crystal09format.o: ../openbabel-master/src/formats/crystal09format.cpp
+	$(CPP) -c ../openbabel-master/src/formats/crystal09format.cpp -o ../openbabel-master/src/formats/crystal09format.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/CSRformat.o: ../openbabel-master/src/formats/CSRformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/CSRformat.cpp -o ../openbabel-master/src/formats/CSRformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/cssrformat.o: ../openbabel-master/src/formats/cssrformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/cssrformat.cpp -o ../openbabel-master/src/formats/cssrformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/daltonformat.o: ../openbabel-master/src/formats/daltonformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/daltonformat.cpp -o ../openbabel-master/src/formats/daltonformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/dlpolyformat.o: ../openbabel-master/src/formats/dlpolyformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/dlpolyformat.cpp -o ../openbabel-master/src/formats/dlpolyformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/dmolformat.o: ../openbabel-master/src/formats/dmolformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/dmolformat.cpp -o ../openbabel-master/src/formats/dmolformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/fastaformat.o: ../openbabel-master/src/formats/fastaformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/fastaformat.cpp -o ../openbabel-master/src/formats/fastaformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/fastsearchformat.o: ../openbabel-master/src/formats/fastsearchformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/fastsearchformat.cpp -o ../openbabel-master/src/formats/fastsearchformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/featformat.o: ../openbabel-master/src/formats/featformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/featformat.cpp -o ../openbabel-master/src/formats/featformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/fhformat.o: ../openbabel-master/src/formats/fhformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/fhformat.cpp -o ../openbabel-master/src/formats/fhformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/fhiaimsformat.o: ../openbabel-master/src/formats/fhiaimsformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/fhiaimsformat.cpp -o ../openbabel-master/src/formats/fhiaimsformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/freefracformat.o: ../openbabel-master/src/formats/freefracformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/freefracformat.cpp -o ../openbabel-master/src/formats/freefracformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/gamessformat.o: ../openbabel-master/src/formats/gamessformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/gamessformat.cpp -o ../openbabel-master/src/formats/gamessformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/genbankformat.o: ../openbabel-master/src/formats/genbankformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/genbankformat.cpp -o ../openbabel-master/src/formats/genbankformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/getinchi.o: ../openbabel-master/src/formats/getinchi.cpp
+	$(CPP) -c ../openbabel-master/src/formats/getinchi.cpp -o ../openbabel-master/src/formats/getinchi.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/ghemicalformat.o: ../openbabel-master/src/formats/ghemicalformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/ghemicalformat.cpp -o ../openbabel-master/src/formats/ghemicalformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/groformat.o: ../openbabel-master/src/formats/groformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/groformat.cpp -o ../openbabel-master/src/formats/groformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/gromos96format.o: ../openbabel-master/src/formats/gromos96format.cpp
+	$(CPP) -c ../openbabel-master/src/formats/gromos96format.cpp -o ../openbabel-master/src/formats/gromos96format.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/gulpformat.o: ../openbabel-master/src/formats/gulpformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/gulpformat.cpp -o ../openbabel-master/src/formats/gulpformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/hinformat.o: ../openbabel-master/src/formats/hinformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/hinformat.cpp -o ../openbabel-master/src/formats/hinformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/jaguarformat.o: ../openbabel-master/src/formats/jaguarformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/jaguarformat.cpp -o ../openbabel-master/src/formats/jaguarformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/lmpdatformat.o: ../openbabel-master/src/formats/lmpdatformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/lmpdatformat.cpp -o ../openbabel-master/src/formats/lmpdatformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/lpmdformat.o: ../openbabel-master/src/formats/lpmdformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/lpmdformat.cpp -o ../openbabel-master/src/formats/lpmdformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/mdffformat.o: ../openbabel-master/src/formats/mdffformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/mdffformat.cpp -o ../openbabel-master/src/formats/mdffformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/mdlformat.o: ../openbabel-master/src/formats/mdlformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/mdlformat.cpp -o ../openbabel-master/src/formats/mdlformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/mmcifformat.o: ../openbabel-master/src/formats/mmcifformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/mmcifformat.cpp -o ../openbabel-master/src/formats/mmcifformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/mmodformat.o: ../openbabel-master/src/formats/mmodformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/mmodformat.cpp -o ../openbabel-master/src/formats/mmodformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/MNAformat.o: ../openbabel-master/src/formats/MNAformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/MNAformat.cpp -o ../openbabel-master/src/formats/MNAformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/moldenformat.o: ../openbabel-master/src/formats/moldenformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/moldenformat.cpp -o ../openbabel-master/src/formats/moldenformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/molproformat.o: ../openbabel-master/src/formats/molproformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/molproformat.cpp -o ../openbabel-master/src/formats/molproformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/molreport.o: ../openbabel-master/src/formats/molreport.cpp
+	$(CPP) -c ../openbabel-master/src/formats/molreport.cpp -o ../openbabel-master/src/formats/molreport.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/mopacformat.o: ../openbabel-master/src/formats/mopacformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/mopacformat.cpp -o ../openbabel-master/src/formats/mopacformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/mpdformat.o: ../openbabel-master/src/formats/mpdformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/mpdformat.cpp -o ../openbabel-master/src/formats/mpdformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/mpqcformat.o: ../openbabel-master/src/formats/mpqcformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/mpqcformat.cpp -o ../openbabel-master/src/formats/mpqcformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/msiformat.o: ../openbabel-master/src/formats/msiformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/msiformat.cpp -o ../openbabel-master/src/formats/msiformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/msmsformat.o: ../openbabel-master/src/formats/msmsformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/msmsformat.cpp -o ../openbabel-master/src/formats/msmsformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/nulformat.o: ../openbabel-master/src/formats/nulformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/nulformat.cpp -o ../openbabel-master/src/formats/nulformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/nwchemformat.o: ../openbabel-master/src/formats/nwchemformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/nwchemformat.cpp -o ../openbabel-master/src/formats/nwchemformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/opendxformat.o: ../openbabel-master/src/formats/opendxformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/opendxformat.cpp -o ../openbabel-master/src/formats/opendxformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/outformat.o: ../openbabel-master/src/formats/outformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/outformat.cpp -o ../openbabel-master/src/formats/outformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/painterformat.o: ../openbabel-master/src/formats/painterformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/painterformat.cpp -o ../openbabel-master/src/formats/painterformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/pcmodelformat.o: ../openbabel-master/src/formats/pcmodelformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/pcmodelformat.cpp -o ../openbabel-master/src/formats/pcmodelformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/pdbformat.o: ../openbabel-master/src/formats/pdbformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/pdbformat.cpp -o ../openbabel-master/src/formats/pdbformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/pdbqtformat.o: ../openbabel-master/src/formats/pdbqtformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/pdbqtformat.cpp -o ../openbabel-master/src/formats/pdbqtformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/pointcloudformat.o: ../openbabel-master/src/formats/pointcloudformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/pointcloudformat.cpp -o ../openbabel-master/src/formats/pointcloudformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/posformat.o: ../openbabel-master/src/formats/posformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/posformat.cpp -o ../openbabel-master/src/formats/posformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/povrayformat.o: ../openbabel-master/src/formats/povrayformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/povrayformat.cpp -o ../openbabel-master/src/formats/povrayformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/pqrformat.o: ../openbabel-master/src/formats/pqrformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/pqrformat.cpp -o ../openbabel-master/src/formats/pqrformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/PQSformat.o: ../openbabel-master/src/formats/PQSformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/PQSformat.cpp -o ../openbabel-master/src/formats/PQSformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/pwscfformat.o: ../openbabel-master/src/formats/pwscfformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/pwscfformat.cpp -o ../openbabel-master/src/formats/pwscfformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/qchemformat.o: ../openbabel-master/src/formats/qchemformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/qchemformat.cpp -o ../openbabel-master/src/formats/qchemformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/reportformat.o: ../openbabel-master/src/formats/reportformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/reportformat.cpp -o ../openbabel-master/src/formats/reportformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/rinchiformat.o: ../openbabel-master/src/formats/rinchiformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/rinchiformat.cpp -o ../openbabel-master/src/formats/rinchiformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/rsmiformat.o: ../openbabel-master/src/formats/rsmiformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/rsmiformat.cpp -o ../openbabel-master/src/formats/rsmiformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/rxnformat.o: ../openbabel-master/src/formats/rxnformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/rxnformat.cpp -o ../openbabel-master/src/formats/rxnformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/shelxformat.o: ../openbabel-master/src/formats/shelxformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/shelxformat.cpp -o ../openbabel-master/src/formats/shelxformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/siestaformat.o: ../openbabel-master/src/formats/siestaformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/siestaformat.cpp -o ../openbabel-master/src/formats/siestaformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/smileyformat.o: ../openbabel-master/src/formats/smileyformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/smileyformat.cpp -o ../openbabel-master/src/formats/smileyformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/stlformat.o: ../openbabel-master/src/formats/stlformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/stlformat.cpp -o ../openbabel-master/src/formats/stlformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/textformat.o: ../openbabel-master/src/formats/textformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/textformat.cpp -o ../openbabel-master/src/formats/textformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/thermoformat.o: ../openbabel-master/src/formats/thermoformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/thermoformat.cpp -o ../openbabel-master/src/formats/thermoformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/tinkerformat.o: ../openbabel-master/src/formats/tinkerformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/tinkerformat.cpp -o ../openbabel-master/src/formats/tinkerformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/titleformat.o: ../openbabel-master/src/formats/titleformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/titleformat.cpp -o ../openbabel-master/src/formats/titleformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/turbomoleformat.o: ../openbabel-master/src/formats/turbomoleformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/turbomoleformat.cpp -o ../openbabel-master/src/formats/turbomoleformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/unichemformat.o: ../openbabel-master/src/formats/unichemformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/unichemformat.cpp -o ../openbabel-master/src/formats/unichemformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/vaspformat.o: ../openbabel-master/src/formats/vaspformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/vaspformat.cpp -o ../openbabel-master/src/formats/vaspformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/viewmolformat.o: ../openbabel-master/src/formats/viewmolformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/viewmolformat.cpp -o ../openbabel-master/src/formats/viewmolformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/wlnformat.o: ../openbabel-master/src/formats/wlnformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/wlnformat.cpp -o ../openbabel-master/src/formats/wlnformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/wln-nextmove.o: ../openbabel-master/src/formats/wln-nextmove.cpp
+	$(CPP) -c ../openbabel-master/src/formats/wln-nextmove.cpp -o ../openbabel-master/src/formats/wln-nextmove.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/xedformat.o: ../openbabel-master/src/formats/xedformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/xedformat.cpp -o ../openbabel-master/src/formats/xedformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/xsfformat.o: ../openbabel-master/src/formats/xsfformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/xsfformat.cpp -o ../openbabel-master/src/formats/xsfformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/yasaraformat.o: ../openbabel-master/src/formats/yasaraformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/yasaraformat.cpp -o ../openbabel-master/src/formats/yasaraformat.o $(CXXFLAGS)
+
+../openbabel-master/src/formats/zindoformat.o: ../openbabel-master/src/formats/zindoformat.cpp
+	$(CPP) -c ../openbabel-master/src/formats/zindoformat.cpp -o ../openbabel-master/src/formats/zindoformat.o $(CXXFLAGS)
+
+../openbabel-master/src/forcefields/forcefieldgaff.o: ../openbabel-master/src/forcefields/forcefieldgaff.cpp
+	$(CPP) -c ../openbabel-master/src/forcefields/forcefieldgaff.cpp -o ../openbabel-master/src/forcefields/forcefieldgaff.o $(CXXFLAGS)
+
+../openbabel-master/src/forcefields/forcefieldghemical.o: ../openbabel-master/src/forcefields/forcefieldghemical.cpp
+	$(CPP) -c ../openbabel-master/src/forcefields/forcefieldghemical.cpp -o ../openbabel-master/src/forcefields/forcefieldghemical.o $(CXXFLAGS)
+
+../openbabel-master/src/forcefields/forcefieldmmff94.o: ../openbabel-master/src/forcefields/forcefieldmmff94.cpp
+	$(CPP) -c ../openbabel-master/src/forcefields/forcefieldmmff94.cpp -o ../openbabel-master/src/forcefields/forcefieldmmff94.o $(CXXFLAGS)
